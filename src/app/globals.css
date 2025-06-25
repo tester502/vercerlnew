@@ -1,0 +1,109 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* #FAFAFA - Slightly off-white */
+    --foreground: 224 71% 4%; /* #071D3F - Very dark desaturated blue for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 210 100% 56%; /* #1A8CFF - Vibrant Blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 215 28% 93%; /* #E8ECF2 - Light Grey */
+    --secondary-foreground: 224 71% 20%; /* #2A446B - Darker blue text on Light Grey */
+
+    --muted: 215 28% 93%; /* #E8ECF2 */
+    --muted-foreground: 215 20% 50%; /* #737C8C - Medium Gray text on Light Grey */
+
+    --accent: 190 95% 45%; /* #0AD4D4 - Vibrant Teal/Cyan */
+    --accent-foreground: 224 71% 4%; /* #071D3F - Dark text on accent for readability */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 87%; /* #D8DDE3 - Slightly more visible border */
+    --input: 215 20% 90%; /* #E0E5EB - Light grey for input backgrounds */
+    --ring: 210 100% 56%; /* #1A8CFF - Primary blue for focus rings */
+    
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    /* Sidebar Specific Theme */
+    --sidebar-background: 0 0% 100%; /* #FFFFFF - White for a cleaner sidebar */
+    --sidebar-foreground: 224 71% 10%; /* #0E2F57 - Dark blue text */
+    --sidebar-primary: 210 100% 56%; /* #1A8CFF - Vibrant Blue for active items */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text on blue */
+    --sidebar-accent: 215 28% 95%; /* #F0F3F5 - Very light grey for hover */
+    --sidebar-accent-foreground: 224 71% 10%; /* #0E2F57 - Dark blue text on hover */
+    --sidebar-border: 215 20% 87%; /* #D8DDE3 - Matching main border */
+    --sidebar-ring: 210 100% 56%; /* #1A8CFF - Vibrant Blue for focus rings */
+  }
+
+  .dark {
+    --background: 220 18% 11%; /* #161A1F - Dark Desaturated Blue */
+    --foreground: 210 20% 95%; /* #F0F3F5 - Very light grey/off-white for text */
+
+    --card: 220 18% 14%; /* #1C2128 - Slightly lighter dark blue for cards */
+    --card-foreground: 210 20% 95%;
+
+    --popover: 220 18% 9%; /* #121519 - Even darker for popovers */
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 210 100% 66%; /* #4DAEFF - Lighter Blue for dark mode primary */
+    --primary-foreground: 224 71% 10%; /* #0E2F57 - Dark blue text on primary for contrast */
+
+    --secondary: 220 18% 20%; /* #2A3038 - Medium Dark Blue */
+    --secondary-foreground: 210 20% 85%; /* #CED4DA - Lighter grey text on dark secondary */
+
+    --muted: 220 18% 20%; /* #2A3038 */
+    --muted-foreground: 210 20% 65%; /* #9AA5B3 - Medium light grey for muted text */
+
+    --accent: 190 90% 55%; /* #2EF0F0 - Lighter Teal/Cyan for dark mode */
+    --accent-foreground: 220 18% 11%; /* #161A1F - Dark background color for text on accent */
+
+    --destructive: 0 72% 51%; /* Slightly adjusted destructive for dark mode */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 18% 25%; /* #343A43 - Darker border */
+    --input: 220 18% 18%; /* #242930 - Darker input background */
+    --ring: 210 100% 66%; /* #4DAEFF - Lighter primary blue for focus rings */
+    
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Dark Sidebar Specific Theme */
+    --sidebar-background: 220 18% 9%; /* #121519 - Slightly darker than main dark bg */
+    --sidebar-foreground: 210 20% 90%; /* #E1E5E8 - Light grey text */
+    --sidebar-primary: 210 100% 66%; /* #4DAEFF - Lighter primary blue */
+    --sidebar-primary-foreground: 224 71% 10%; /* #0E2F57 - Dark blue text on primary */
+    --sidebar-accent: 220 18% 16%; /* #20252C - Slightly lighter dark for hover */
+    --sidebar-accent-foreground: 210 20% 90%; /* #E1E5E8 - Light grey text on hover */
+    --sidebar-border: 220 18% 20%; /* #2A3038 - Matching secondary for subtle separation */
+    --sidebar-ring: 210 100% 66%; /* #4DAEFF */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Remove default font-family: Arial, Helvetica, sans-serif; to let Next/Font (Geist) take precedence */
+  }
+}
